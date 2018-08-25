@@ -3,3 +3,5 @@
 No database, so we will have no persistence if we kill the web service. 
 
 This is just a simple Python REST API example simple using Tornado.
+
+?title="How to Make a Million Dollars Blogging"&author="Bill Ward"

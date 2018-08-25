@@ -12,11 +12,11 @@ class testApiBook(AsyncHTTPTestCase):
         return '%s://localhost:%s%s' % (self.get_protocol(),
                                         self.get_http_port(), path)
 
-    @tornado.testing.gen_test
+
     def testAddBooksInCart(self):
         headers = {
             "Content-Type": "<meta http-equiv=\"Content-type\" content=\"text/html; charset=utf-8\" />",
         }
-        response = yield self.fetch('/v1/addbook?title="R"&author="Bill Ward"', headers=headers, method="GET")
+        response = self.fetch('/v1/addbook?title="R"&author="Bill Ward"')
 
         assert response.code == 200

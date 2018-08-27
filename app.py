@@ -1,15 +1,22 @@
 from flask import Flask, render_template, redirect, \
       url_for, request, session, flash, g
+import requests
 from functools import wraps
 import sqlite3
 
 app = Flask(__name__)
+app.secret_key = 'super secret key'
 
-@app.route('/home')
+@app.route('/home',methods=['GET', 'POST'])
 def home():
+    if request.method == 'POST':
+        total = request.form['total_purchase']
+        r = requests.get('https://api.github.com/events')
+        #r.json()
+        return r.text
     return render_template('home.html')
 
-@app.route('/login', methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
 def login():
     error = None
     if request.method == 'POST':

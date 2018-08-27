@@ -16,4 +16,6 @@ COPY requirements.txt /
 
 RUN pip install -r requirements.txt
 
+WORKDIR /codigo_aplicacao/
+
 CMD python /codigo_aplicacao/app.py

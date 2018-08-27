@@ -12,13 +12,8 @@ RUN yum update -y \
 RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py \
 && python get-pip.py
 
-#RUN pip install flask \
-#&& pip install flask_httpauth
-
 COPY requirements.txt /
 
 RUN pip install -r requirements.txt
 
-EXPOSE 80
-
-CMD python /codigo_aplicacao/app/app.py
+CMD python /codigo_aplicacao/app.py

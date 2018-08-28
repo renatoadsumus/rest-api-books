@@ -10,11 +10,10 @@ app.secret_key = 'super secret key'
 @app.route('/home',methods=['GET', 'POST'])
 def home():
     if request.method == 'POST':
+        ### VALUE COMES VIEW BUTTON
         total_purchase = request.form['btn_total_purchase']
-        param_querystring = {'post_total_purchase': total_purchase}
-        #r = requests.get('https://api.github.com/events', params=param_querystring)
-        r = requests.post('http://34.227.88.52:8080', data=param_querystring)
-        print(r.url)
+        param_post ={'post_total_purchase': total_purchase }
+        r = requests.post('http://34.227.88.52:8080', data=param_post)
         return r.text
 
     return render_template('home.html')

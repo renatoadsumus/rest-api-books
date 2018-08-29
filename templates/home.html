@@ -2,21 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Production</title>
 </head>
 <body>
+<h1> Production Environment</h1>
+
 <h1>Enter Purchase Total</h1>
 <form action="/home" method="post">
   <input type="hidden" name="search-type" value="commercial">
     <ul>
     <li name="search-option" id="total_10" value="10"> > 10 € = 10%</li>
-    <li name="search-option" id="total_20" value="15"> > 20 € = 15%</li>
-    <li name="search-option" id="total_30" value="20"> > 30 € = 20%</li>
-    <li name="search-option" id="total_40" value="30"> > 40 € = 25%</li>
+    <li name="search-option" id="total_20" value="20"> > 20 € = 20%</li>    
     </ul>
     <label>Purchase Total is</label>
     <input type="text" name="btn_total_purchase">
-  <input type="submit" value="Discount Amount" name="submit">
+  <input type="submit" value="Calculate Discount" name="submit">
 </form>
 
 </body>

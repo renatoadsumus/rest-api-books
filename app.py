@@ -13,7 +13,13 @@ def home():
         ### VALUE COMES VIEW BUTTON
         total_purchase = request.form['btn_total_purchase']
         param_post ={'post_total_purchase': total_purchase }
-        r = requests.post('http://34.227.88.52:8080', data=param_post)
+
+        ###PRD
+        api_discount = 'http://34.227.88.52:8080'
+        ###STG
+        #api_discount = 'http://34.227.88.52:8082'
+
+        r = requests.post(api_discount, data=param_post)
         return r.text
 
     return render_template('home.html')

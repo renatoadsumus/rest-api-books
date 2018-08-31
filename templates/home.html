@@ -8,15 +8,15 @@
 <h1> Production Environment</h1>
 
 <h1>Enter Purchase Total</h1>
-<form action="/home" method="post">
+<form action="/home" method="post" id="form_purchase">
   <input type="hidden" name="search-type" value="commercial">
     <ul>
     <li name="search-option" id="total_10" value="10"> > 10 € = 10%</li>
     <li name="search-option" id="total_20" value="20"> > 20 € = 20%</li>    
     </ul>
     <label>Purchase Total is</label>
-    <input type="text" name="btn_total_purchase">
-  <input type="submit" value="Calculate Discount" name="submit">
+    <input type="text" name="btn_total_purchase" id="txt_purchase">
+  <input type="submit" value="Calculate Discount" name="submit" id="btn_purchase">
 </form>
 <br/>
 <table style="width:10%">

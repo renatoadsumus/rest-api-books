@@ -15,9 +15,9 @@ def home():
         param_post ={'post_total_purchase': total_purchase }
 
         ###PRD
-        api_discount = 'http://34.227.88.52:8080'
+        api_discount = 'http://34.205.76.190:8080'
         ###STG
-        #api_discount = 'http://34.227.88.52:8082'
+        #api_discount = 'http://34.205.76.190:8082'
 
         r = requests.post(api_discount, data=param_post)
         return r.text

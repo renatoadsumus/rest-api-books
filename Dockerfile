@@ -1,3 +1,5 @@
+#docker run -d -p 8080:5000 -v /home/ec2-user/rest-app-purchase/:/codigo_aplicacao/ renatoadsumus/python:latest
+
 FROM centos:7
 
 ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
